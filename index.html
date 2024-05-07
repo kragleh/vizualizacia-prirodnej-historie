@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body style="display: block;">
-  <div style="position: relative;">
-    <img src="./picture2.jpg" alt="tatry1" id="tatry1" style="width: 100%; position: absolute; top: 0; left: 0;">
-    <img src="./picture1.jpg" alt="tatry2" id="tatry2" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0;">
-    <input type="range" min="1" max="100" value="1" id="slider" style="margin-top: 306px; width: 100%;">
-  </div>
+  <h1 class="text-center text-2xl m-4 font-medium text-green-500">Dynamika zmien v pohybe</h1>
+  <section class="max-w-md mx-auto rounded px-4">
+    <div style="position: relative;">
+      <img src="./picture2.jpg" class="aspect-video" alt="tatry1" id="tatry1" style="width: 100%; position: absolute; top: 0; left: 0;">
+      <img src="./picture1.jpg" class="aspect-video" alt="tatry2" id="tatry2" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0;">
+      <input type="range" min="1" max="100" value="1" id="slider" style="margin-top: 306px; width: 100%;" class="accent-green-500">
+    </div>
+  </section>
   <script>
     const slider = document.getElementById("slider")
     const image1 = document.getElementById("tatry1")
