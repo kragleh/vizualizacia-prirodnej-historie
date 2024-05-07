@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="display: block;">
+  <div style="position: relative;">
+    <img src="tatry1.png" alt="tatry1" id="tatry1" style="width: 100%; position: absolute; top: 0; left: 0;">
+    <img src="tatry2.png" alt="tatry2" id="tatry2" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0;">
+    <input type="range" min="1" max="100" value="1" id="slider" style="margin-top: 306px; width: 100%;">
+  </div>
+  <script>
+    const slider = document.getElementById("slider")
+    const image1 = document.getElementById("tatry1")
+    const image2 = document.getElementById("tatry2")
+
+    setTimeout(() => {
+      slider.style.marginTop = image1.offsetHeight + 8 + 'px'
+    }, 60)
+
+    slider.addEventListener("input", () => {
+      const value = slider.value / 100
+      image2.style.opacity = value
+    })
+  </script>
+</body>
+</html>
